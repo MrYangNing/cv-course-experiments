@@ -1,0 +1,7 @@
+{
+  "yolov8n.pt": "f59b3d833e2ff32e194b5bb8e08d211dc7c5bdf144b90d2c8412c47ccfc83b36",
+  "work/provenance/downloads/coco128.zip": "61e5e3028863d8ffc3b81d6a514603954889f0edd5e4b44c4ce60b2da99aeb8e",
+  "work/provenance/downloads/images.tar.gz.incomplete": "267ce1e15a6a770d2c1e2e686e2ad1d3fa070fb970c4eb2f803b393d228bfa27",
+  "work/provenance/downloads/annotations-full.tar.gz": "52425fb6de5c424942b7626b428656fcbd798db970a937df61750c0f1d358e91",
+  "work/provenance/downloads/cifar-fastai.tgz": "637c5814e11aefcb6ee76d5f59c67ddc8de7f5b5077502a195b0833d1e3e4441"
+}

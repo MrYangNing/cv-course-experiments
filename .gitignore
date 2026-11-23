@@ -1,0 +1,7 @@
+__pycache__/
+work/provenance/
+work/personal/*
+!work/personal/*.py
+*.pt
+runs/
+.venv/

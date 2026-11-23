@@ -1,0 +1,121 @@
+{
+  "Base": {
+    "top5": 1922,
+    "latency_ms": 3.60545,
+    "parameters": 11173962,
+    "flops": 1110845440,
+    "validation": [
+      824,
+      989,
+      1115,
+      1255,
+      1187,
+      1035
+    ],
+    "test_correct": 1229,
+    "test_n": 2000,
+    "best_epoch": 4
+  },
+  "SE": {
+    "top5": 1933,
+    "latency_ms": 5.9958,
+    "parameters": 11263042,
+    "flops": 1111019520,
+    "validation": [
+      834,
+      1006,
+      1127,
+      1166,
+      1206,
+      1047
+    ],
+    "test_correct": 1216,
+    "test_n": 2000,
+    "best_epoch": 5
+  },
+  "CBAM": {
+    "top5": 1926,
+    "latency_ms": 9.654900000000001,
+    "parameters": 11263826,
+    "flops": 1111726720,
+    "validation": [
+      820,
+      999,
+      1066,
+      1090,
+      1210,
+      1144
+    ],
+    "test_correct": 1229,
+    "test_n": 2000,
+    "best_epoch": 5
+  },
+  "ECA": {
+    "top5": 1907,
+    "latency_ms": 5.305400000000001,
+    "parameters": 11173986,
+    "flops": 1110856960,
+    "validation": [
+      854,
+      1055,
+      1097,
+      1173,
+      1160,
+      1243
+    ],
+    "test_correct": 1239,
+    "test_n": 2000,
+    "best_epoch": 6
+  },
+  "STD": {
+    "top5": 1913,
+    "latency_ms": 0.7493000000000001,
+    "parameters": 94762,
+    "flops": 20646400,
+    "validation": [
+      774,
+      936,
+      884,
+      1042,
+      1068,
+      1048
+    ],
+    "test_correct": 1114,
+    "test_n": 2000,
+    "best_epoch": 5
+  },
+  "DS": {
+    "top5": 1877,
+    "latency_ms": 0.7858499999999999,
+    "parameters": 12965,
+    "flops": 2572800,
+    "validation": [
+      652,
+      842,
+      810,
+      909,
+      913,
+      965
+    ],
+    "test_correct": 981,
+    "test_n": 2000,
+    "best_epoch": 6
+  },
+  "KD": {
+    "top5": 1866,
+    "latency_ms": 0.78145,
+    "parameters": 12965,
+    "flops": 2572800,
+    "validation": [
+      644,
+      760,
+      807,
+      903,
+      942,
+      936
+    ],
+    "test_correct": 952,
+    "test_n": 2000,
+    "best_epoch": 5
+  }
+}

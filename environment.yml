@@ -1,0 +1,23 @@
+name: cv
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11
+  - torchvision=0.23
+  - scikit-learn
+  - timm
+  - scipy
+  - matplotlib=3.9
+  - requests
+  - scikit-image
+  - pyyaml
+  - ultralytics-thop
+  - numpy=1.26
+  - tqdm
+  - ultralytics
+  - pillow
+  - pytorch=2.8.0[build=cuda128*]
+  - opencv
+  - pandas
+  - grad-cam

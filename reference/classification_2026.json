@@ -1,0 +1,274 @@
+{
+  "Base": {
+    "top5": 1934,
+    "latency_ms": 4.0493500000000004,
+    "parameters": 11173962,
+    "flops": 1110845440,
+    "validation": [
+      803,
+      923,
+      1107,
+      1115,
+      1253,
+      1305
+    ],
+    "test_correct": 1306,
+    "test_n": 2000,
+    "best_epoch": 6
+  },
+  "SE": {
+    "top5": 1934,
+    "latency_ms": 6.2456,
+    "parameters": 11263042,
+    "flops": 1111019520,
+    "validation": [
+      908,
+      1061,
+      1145,
+      1140,
+      1231,
+      1259
+    ],
+    "test_correct": 1251,
+    "test_n": 2000,
+    "best_epoch": 6
+  },
+  "CBAM": {
+    "top5": 1920,
+    "latency_ms": 10.0914,
+    "parameters": 11263826,
+    "flops": 1111726720,
+    "validation": [
+      914,
+      1080,
+      1093,
+      1023,
+      1118,
+      1090
+    ],
+    "test_correct": 1154,
+    "test_n": 2000,
+    "best_epoch": 5
+  },
+  "ECA": {
+    "top5": 1941,
+    "latency_ms": 5.41125,
+    "parameters": 11173986,
+    "flops": 1110856960,
+    "validation": [
+      884,
+      1100,
+      1163,
+      1142,
+      1150,
+      1280
+    ],
+    "test_correct": 1263,
+    "test_n": 2000,
+    "best_epoch": 6
+  },
+  "STD": {
+    "top5": 1894,
+    "latency_ms": 0.80835,
+    "parameters": 94762,
+    "flops": 20646400,
+    "validation": [
+      840,
+      924,
+      968,
+      1037,
+      1004,
+      1087
+    ],
+    "test_correct": 1109,
+    "test_n": 2000,
+    "best_epoch": 6
+  },
+  "DS": {
+    "top5": 1876,
+    "latency_ms": 0.8745499999999999,
+    "parameters": 12965,
+    "flops": 2572800,
+    "validation": [
+      671,
+      771,
+      822,
+      848,
+      928,
+      932
+    ],
+    "test_correct": 968,
+    "test_n": 2000,
+    "best_epoch": 6
+  },
+  "KD": {
+    "top5": 1857,
+    "latency_ms": 0.8389500000000001,
+    "parameters": 12965,
+    "flops": 2572800,
+    "validation": [
+      592,
+      730,
+      739,
+      766,
+      905,
+      912
+    ],
+    "test_correct": 914,
+    "test_n": 2000,
+    "best_epoch": 6
+  },
+  "T1": {
+    "top5": 1870,
+    "latency_ms": 0.8316,
+    "parameters": 12965,
+    "flops": 2572800,
+    "validation": [
+      685,
+      763,
+      804,
+      851,
+      930,
+      961
+    ],
+    "test_correct": 959,
+    "test_n": 2000,
+    "best_epoch": 6
+  },
+  "T2": {
+    "top5": 1864,
+    "latency_ms": 0.9444,
+    "parameters": 12965,
+    "flops": 2572800,
+    "validation": [
+      641,
+      743,
+      784,
+      796,
+      917,
+      951
+    ],
+    "test_correct": 935,
+    "test_n": 2000,
+    "best_epoch": 6
+  },
+  "T6": {
+    "top5": 1853,
+    "latency_ms": 0.9558,
+    "parameters": 12965,
+    "flops": 2572800,
+    "validation": [
+      560,
+      725,
+      726,
+      762,
+      888,
+      897
+    ],
+    "test_correct": 895,
+    "test_n": 2000,
+    "best_epoch": 6
+  },
+  "T8": {
+    "top5": 1842,
+    "latency_ms": 0.8746,
+    "parameters": 12965,
+    "flops": 2572800,
+    "validation": [
+      540,
+      712,
+      717,
+      739,
+      888,
+      884
+    ],
+    "test_correct": 894,
+    "test_n": 2000,
+    "best_epoch": 5
+  },
+  "T10": {
+    "top5": 1843,
+    "latency_ms": 0.85945,
+    "parameters": 12965,
+    "flops": 2572800,
+    "validation": [
+      530,
+      702,
+      720,
+      732,
+      881,
+      886
+    ],
+    "test_correct": 892,
+    "test_n": 2000,
+    "best_epoch": 6
+  },
+  "A01": {
+    "top5": 1868,
+    "latency_ms": 0.3402,
+    "parameters": 12965,
+    "flops": 2572800,
+    "validation": [
+      655,
+      775,
+      828,
+      833,
+      912,
+      952
+    ],
+    "test_correct": 996,
+    "test_n": 2000,
+    "best_epoch": 6
+  },
+  "A03": {
+    "top5": 1867,
+    "latency_ms": 0.3537,
+    "parameters": 12965,
+    "flops": 2572800,
+    "validation": [
+      645,
+      754,
+      792,
+      798,
+      909,
+      950
+    ],
+    "test_correct": 942,
+    "test_n": 2000,
+    "best_epoch": 6
+  },
+  "A07": {
+    "top5": 1860,
+    "latency_ms": 0.7874,
+    "parameters": 12965,
+    "flops": 2572800,
+    "validation": [
+      530,
+      698,
+      697,
+      753,
+      871,
+      878
+    ],
+    "test_correct": 881,
+    "test_n": 2000,
+    "best_epoch": 6
+  },
+  "A09": {
+    "top5": 1832,
+    "latency_ms": 0.79365,
+    "parameters": 12965,
+    "flops": 2572800,
+    "validation": [
+      491,
+      640,
+      654,
+      742,
+      857,
+      849
+    ],
+    "test_correct": 880,
+    "test_n": 2000,
+    "best_epoch": 5
+  }
+}
