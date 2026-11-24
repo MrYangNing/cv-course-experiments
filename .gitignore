@@ -2,6 +2,9 @@ __pycache__/
 work/provenance/
 work/personal/*
 !work/personal/*.py
+!work/personal/course_check/
+work/personal/course_check/*
+!work/personal/course_check/*.py
 *.pt
 runs/
 .venv/

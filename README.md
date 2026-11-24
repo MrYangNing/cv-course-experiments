@@ -68,3 +68,19 @@ python prepare_data.py all --from-dir "D:/实验数据包解压目录"
 该目录应直接包含 `yolov8n.pt` 与 `work/provenance/downloads/`。遇到校验不符，请检查下载是否完整、压缩包版本是否一致。遇到找不到数据或权重时，先确认当前目录是仓库根目录，并重新运行对应的准备命令。若要比较新配置，请先另存已有结果；同一种子重复运行会使用相同输出路径。
 
 原始数据和预训练权重从各自发布方获取，其使用条件见对应项目。[COCO128](https://docs.ultralytics.com/datasets/detect/coco128/) · [Oxford-IIIT Pet](https://www.robots.ox.ac.uk/~vgg/data/pets/) · [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) · [YOLOv8](https://docs.ultralytics.com/models/yolov8/)
+
+## 6. 课程要求核对版的补充实验与附录
+
+在仓库根目录运行。直接使用本地完整包时，可以跳过训练，先核对配套记录，再重绘报告中的图。
+
+| 报告位置 | 命令 | 所需输入和输出 |
+|---|---|---|
+| 表 8a、11a | `python extra_compare.py` | 读取 Pet 归档、分割名单、分类名单和种子 2026 的预测。终端输出 Otsu/GrabCut 指标及精确 McNemar 检验与 Holm 校正。 |
+| 表 12a | 查阅 `reference/classification_2024.json` 至 `classification_2026.json` | Base、DS、KD 对应教师、直接训练学生和蒸馏学生。每个种子的 test_correct 除以 2,000 得到表中准确率。 |
+| 附录 C 三幅图 | `python work/personal/appendix_figures.py` | 需要实验一的 image_series、实验二的检测示例与测试图、实验三的逐图预测及分类名单；生成 work/personal/expanded/ 下的图和逐框、逐类计数。 |
+| 图 9a、10a、11a | `python work/personal/course_check/plots.py` | 读取同目录 examples.npz，绘制 U-Net、误差叠加、残差注意力结构图，写出 analysis.json。 |
+| 从头生成图 10a 的输入 | `python work/personal/course_check/rerun.py` | 先运行 `python prepare_data.py segmentation`；复跑 U-Net/CE，保存 59 张测试图的 ID、RGB、真值和预测到 examples.npz。 |
+
+主实验的 128×128 U-Net/CE 测试 mIoU 为 **0.611200**，彩色图对应的独立复跑为 **0.597232**。主表的结果在 `reference/segmentation.json`，复跑结果在 `reference/supplement/segmentation.json`。要重绘报告中的同一批彩色案例，使用本地完整包自带的 examples.npz。重新训练会覆盖该文件，模型和极端样本可能变化。图中的逐像素颜色分别表示命中（绿）、漏检（红）、误检（橙）和忽略边界（灰）。
+
+补充参考记录在 `reference/supplement/`：extra_compare.json 对应传统基线与配对检验，derived.json 对应附录 C，analysis.json 对应彩色案例。本地完整包另含署名 Word、实验输入、保存的权重、训练日志和原始预测；公开仓库提供生成这些结果的代码和环境。
