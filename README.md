@@ -84,3 +84,23 @@ python prepare_data.py all --from-dir "D:/实验数据包解压目录"
 主实验的 128×128 U-Net/CE 测试 mIoU 为 **0.611200**，彩色图对应的独立复跑为 **0.597232**。主表的结果在 `reference/segmentation.json`，复跑结果在 `reference/supplement/segmentation.json`。要重绘报告中的同一批彩色案例，使用本地完整包自带的 examples.npz。重新训练会覆盖该文件，模型和极端样本可能变化。图中的逐像素颜色分别表示命中（绿）、漏检（红）、误检（橙）和忽略边界（灰）。
 
 补充参考记录在 `reference/supplement/`：extra_compare.json 对应传统基线与配对检验，derived.json 对应附录 C，analysis.json 对应彩色案例。本地完整包另含署名 Word、实验输入、保存的权重、训练日志和原始预测；公开仓库提供生成这些结果的代码和环境。
+
+## 7. 宠物分割三种子复验（表 8b）
+
+固定 57/14/59 张训练、验证、测试图，分别训练 96 和 128 像素的方形输入，通过三种随机种子对照三种网络／损失配置。各运行保留最佳验证轮次的权重、25 轮验证轨迹和测试预测。对应表格的未舍入值在 `reference/pet_repeat_summary.json`。
+
+从完整包根目录运行下面的命令核对已有权重，需要 cv 环境和 CUDA 显卡。公开仓库仅含程序与数值记录，首次从仓库运行时，先用 `python prepare_data.py segmentation` 准备数据，再执行训练命令。
+
+```powershell
+conda activate cv
+python work/personal/pet_experiment.py --verify
+```
+
+如需从头训练并保留原归档，指定独立目录：
+
+```powershell
+python work/personal/pet_experiment.py --output work/personal/new_pet_runs
+python work/personal/pet_experiment.py --output work/personal/new_pet_runs --verify
+```
+
+三个单次运行入口共用同一份数据读取、训练和评价代码。可使用 `--verify --output 新目录` 重绘种子 2026 的三种子实验输出。旧图 10、10a 与表 8 对应的原始文件仍可从完整包查阅。新训练结果应与表 8b 对照。
